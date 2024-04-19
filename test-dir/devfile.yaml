@@ -13,7 +13,7 @@ components:
     attributes:
       container-overrides: {"volumeMounts": [{"name": "secret-volume", "readOnly": true, "mountPath": "/etc/secret-volume"}]}
     container:
-      image: registry.redhat.io/devspaces/udi-rhel8@sha256:7e942155ebd808256e34a9411b85e41ae41d771353146cf6c15ed0b6bd4caacd
+      image:  registry.redhat.io/devspaces/udi-rhel8:3.13
       endpoints:
         - exposure: public
           name: django

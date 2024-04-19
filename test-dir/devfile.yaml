@@ -1,8 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
   name: python-django-local-downstream-udi
-attributes:
-  pod-overrides: {"spec": {"volumes": [{"name": "secret-volume", "secret": {"secretName": "dotfile-secret", "defaultMode": 420}}]}}
 projects:
   - name: springbootproject
     git:
@@ -10,8 +8,6 @@ projects:
         origin: https://github.com/odo-devfiles/springboot-ex.git
 components:
   - name: tools
-    attributes:
-      container-overrides: {"volumeMounts": [{"name": "secret-volume", "readOnly": true, "mountPath": "/etc/secret-volume"}]}
     container:
       image:  quay.io/devfile/universal-developer-image:ubi8-latest
       endpoints:

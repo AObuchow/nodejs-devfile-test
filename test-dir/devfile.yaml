@@ -9,7 +9,7 @@ projects:
 components:
   - name: tools
     container:
-      image:  quay.io/devfile/universal-developer-image:ubi8-latest
+      image:  quay.io/aobuchow/universal-developer-image:no-node-on-path
       endpoints:
         - exposure: public
           name: django
